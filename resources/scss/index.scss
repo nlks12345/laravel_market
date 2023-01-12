@@ -1,0 +1,72 @@
+@import "../../node_modules/bootstrap/scss/functions";
+
+// custom variable here
+@import "../scss/custom-variable.scss";
+
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+.navbar {
+    border: none;
+}
+
+.display-title,
+.display-body {
+    font-weight: 900;
+}
+.display-title {
+    font-size: 100px;
+    text-shadow: none;
+}
+@include media-breakpoint-down(xl) {
+    .display-title {
+        font-size: 80px;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .display-title {
+        font-size: 60px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .display-title {
+        font-size: 40px;
+    }
+}
+.display-body {
+    font-size: 40px;
+}
+
+@include media-breakpoint-down(md) {
+    .display-body {
+        font-size: 24px;
+    }
+}
+
+img.fit-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.max-height-800 {
+    max-height: 800px;
+}
+
+@include media-breakpoint-down(md) {
+    .max-height-800 {
+       max-height:unset;
+    }
+}
+
+.btn-footer {
+    width: auto;
+} 
+
+@include media-breakpoint-down(md) {
+    .btn-footer {
+        width: 100%;
+    }
+}

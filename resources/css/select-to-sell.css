@@ -1,0 +1,94 @@
+.navbar {
+  border: none;
+}
+
+.btn-action.btn.btn-outline-primary.btn-link {
+  font-size: 20px;
+  height: 240px;
+  width: 240px;
+  line-height: 1.25;
+  padding: 2rem;
+}
+
+.btn-action.btn.btn-outline-primary.btn-link i.fa-solid {
+  font-size: 60px;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 767.98px) {
+  .btn-action.btn.btn-outline-primary.btn-link {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.uploadBtn {
+  background-color: white;
+  border: 1px solid #ff9d00;
+  height: 200px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ff9d00;
+}
+
+.uploadBtn i.fa-solid {
+  font-size: 1.5rem;
+}
+
+.new-collection {
+  width: 100%;
+  height: calc(100% - 24px - 0.25rem);
+}
+
+.radio-custom {
+  width: 100%;
+}
+
+.radio-custom [type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-custom [type="radio"] + .ratio {
+  width: 100%;
+  border: 0 solid transparent;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.radio-custom [type="radio"] + .ratio img {
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.radio-custom [type="radio"]:checked + .ratio {
+  border-color: #ff9d00;
+  border-width: 3px;
+}
+
+.radio-custom [type="radio"]:checked + .ratio img {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.radio-custom [type="radio"]:checked ~ p {
+  color: #ff9d00;
+}
+
+.radio-custom p {
+  margin-top: 0.25rem;
+}
+/*# sourceMappingURL=select-to-sell.css.map */

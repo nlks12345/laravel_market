@@ -1,0 +1,80 @@
+// need to recompile both custom-bs5.scss & custom-variable.scss
+// if changes are made
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 2480px,
+  xxxxl: 3800px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  xxxl: 2200px,
+  xxxxl: 3280px,
+);
+
+$aspect-ratios: (
+  "1x1": 100%,
+  "3x2": calc(2 / 3 * 100%),
+  "2x3": calc(3 / 2 * 100%),
+  "4x3": calc(3 / 4 * 100%),
+  "3x4": calc(4 / 3 * 100%),
+  "16x9": calc(9 / 16 * 100%),
+  "9x16": calc(16 / 9 * 100%),
+  "21x9": calc(9 / 21 * 100%),
+  "9x21": calc(21 / 9 * 100%),
+  "32x9": calc(9 / 32 * 100%),
+  "9x32": calc(32 / 9 * 100%),
+);
+
+$primary: #ff9d00;
+$black: #262626;
+$success: #24c176;
+$modal-backdrop-opacity: 0.9;
+// $black: $black-base;
+$primary-dark: #ff7b00;
+$primary-light: lighten($primary, 25%);
+$primary-light-2: lighten($primary, 45%);
+// $primary-color-light-2: rgb(243, 241, 252);
+// $elevation-4: 0 8px 20px 0 rgba(0,0,0,.025),0 10px 20px 0 rgba(0,0,0,.05);
+// $elevation-3: 0 5px 11px 0 rgba(0,0,0,.05),0 4px 15px 0 rgba(0,0,0,.1);
+$elevation-2: 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 5px 10px rgba(0, 0, 0, 0.2);
+$elevation-3: 0 5px 11px 0 rgba(0, 0, 0, 0.05), 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+$primary-gradient: linear-gradient(90deg, $primary-dark 15%, $primary);
+$grey-base: #e6e6e6;
+$grey-dark: #828282;
+$grey-light: #f3f3f3;
+$grey-light-2: #fafafa;
+$border-radius: 0.125rem;
+$btn-padding-x: 1rem;
+$btn-font-weight: 700;
+$btn-font-size: 0.875rem;
+// $tooltip-padding-y:  1rem;
+// $tooltip-padding-x: 1rem;
+
+// $enable-negative-margins: true;
+// $modal-backdrop-opacity: .8;
+
+// // font
+// @font-face {
+//     font-family: "Bronova-Bold";
+//     src:url('../font-woff/bronova-bold.woff');
+// }
+
+// @font-face {
+//     font-family: "Bronova-Regular";
+//     src:url('../font-woff/bronova-regular.woff');
+// }
+
+// $font-regular: "Bronova-Regular";
+// $font-bold: "Bronova-Bold";
+$font-family-sans-serif: "Noto Sans", sans-serif;

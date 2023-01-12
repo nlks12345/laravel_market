@@ -1,0 +1,13 @@
+.accordion-item {
+  border: 0;
+}
+
+.accordion-item .accordion-button {
+  padding: 0;
+}
+
+.accordion-item .accordion-body {
+  padding: 0;
+  margin-top: 1.5rem;
+}
+/*# sourceMappingURL=asset-detail.css.map */

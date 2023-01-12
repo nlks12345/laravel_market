@@ -1,0 +1,105 @@
+@import "../../node_modules/bootstrap/scss/functions";
+
+// custom variable here
+@import "../scss/custom-variable.scss";
+
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+.navbar {
+    border: none;
+}
+
+.profile {
+    position: relative;
+    // padding: 2rem;
+    // text-align: center;
+    height: 80vh;
+    min-height: 700px;
+    max-height: 800px;
+
+    .profile-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // transform: translateX(-50%);
+        // z-index: -1;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        // transform: translate(-50%, -50%);
+        #btn-changebg {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .profile-bg {
+            height: 50%;
+        }
+    }
+    .profile-info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -45%);
+        padding: 2rem;
+        width: 80%;
+        max-width: 660px;
+
+        .btnChangeProfile {
+            margin-top: 3.5rem;
+        }
+
+        @include media-breakpoint-down(md) {
+            .btnChangeProfile {
+                margin-top: 2rem;
+            }
+        }
+
+        .profile-main-pic {
+            // margin: -20% auto 0 auto;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            // margin-bottom: 1.5rem;
+        }
+
+        @include media-breakpoint-down(md) {
+            .profile-main-pic {
+                transform: translate(-50%, -75%);
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .profile-info {
+            padding: 1rem;
+            width: 100%;
+            // top: unset;
+            // bottom: 0;
+            transform: translate(0);
+            position: static;
+            margin-top: 10rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    // @include media-break
+}
+
+@include media-breakpoint-down(md) {
+    .profile {
+        height: auto;
+        max-height: unset;
+        min-height: 350px;
+    }
+}

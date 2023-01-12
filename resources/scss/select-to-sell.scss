@@ -1,0 +1,98 @@
+@import "../../node_modules/bootstrap/scss/functions";
+
+// custom variable here
+@import "../scss/custom-variable.scss";
+
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+.navbar {
+    border: none;
+}
+
+.btn-action.btn.btn-outline-primary.btn-link {
+    font-size: 20px;
+    height: 240px;
+    width: 240px;
+    line-height: 1.25;
+    padding: 2rem;
+    i.fa-solid {
+        font-size: 60px;
+        margin-bottom: 1rem;
+        // margin-top: 2.5rem;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .btn-action.btn.btn-outline-primary.btn-link {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.uploadBtn {
+    background-color: white;
+    border: 1px solid $primary;
+    // width: 280px;
+    height: 200px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    // flex-direction: column;
+    justify-content: center;
+    // font-size: 1.5rem;
+    color: $primary;
+
+    i.fa-solid {
+        font-size: 1.5rem;
+        // margin-bottom: 1rem;
+    }
+}
+
+.new-collection {
+    width: 100%;
+    // height: 100%;
+    height: calc(100% - 24px - 0.25rem);
+}
+//radio selector with img
+.radio-custom {
+    width: 100%;
+    [type="radio"] {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        & + .ratio {
+            width: 100%;
+            // height: 200px;
+            border: 0 solid transparent;
+            transition: all 0.25s ease-in-out;
+
+            img {
+                cursor: pointer;
+                transition: all 0.25s ease-in-out;
+            }
+        }
+
+        &:checked {
+            & + .ratio {
+                border-color: $primary;
+                border-width: 3px;
+                img {
+                    transform: scale(0.95);
+                }
+            }
+
+            & ~ p {
+                color: $primary;
+                // font-weight: 700;
+            }
+        }
+    }
+
+    p {
+        margin-top: 0.25rem;
+    }
+}

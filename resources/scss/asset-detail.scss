@@ -1,0 +1,20 @@
+@import "../../node_modules/bootstrap/scss/functions";
+
+// custom variable here
+@import "../scss/custom-variable.scss";
+
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+.accordion-item {
+    border: 0;
+
+    .accordion-button {
+        padding: 0;
+    }
+
+    .accordion-body {
+        padding: 0;
+        margin-top: 1.5rem;
+    }
+}

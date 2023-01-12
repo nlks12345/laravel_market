@@ -1,0 +1,295 @@
+@import "../../node_modules/bootstrap/scss/functions";
+
+// custom variable here
+@import "../scss/custom-variable.scss";
+
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+.navbar {
+    border: none;
+}
+
+.profile {
+    position: relative;
+    // padding: 2rem;
+    text-align: center;
+    height: 80vh;
+    min-height: 700px;
+    max-height: 800px;
+
+    .profile-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        // transform: translate(-50%, -50%);
+    }
+
+    @include media-breakpoint-down(md) {
+        .profile-bg {
+            height: 50%;
+        }
+    }
+    .profile-info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2rem;
+        width: 80%;
+        max-width: 660px;
+
+        .profileName {
+            margin-top: 3.5rem;
+        }
+
+        @include media-breakpoint-down(md) {
+            .profileName {
+                margin-top: 2rem;
+            }
+        }
+        .stats {
+            flex: 1 1 0;
+            padding: 0 0.5rem;
+
+            .display-body {
+                margin-bottom: 0;
+            }
+
+            p {
+                margin-bottom: 0.75rem;
+                // font-size: .875rem;
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            .stats-wrapper {
+                // width: min-content;
+                overflow-x: scroll;
+                padding: 1rem 0;
+            }
+
+            .stats {
+                border: 1px solid $grey-base;
+                padding: 1rem;
+                // margin-bottom: .25rem;
+                margin: 0 0.25rem;
+                flex: 1 0 45%;
+                // text-align: start;
+                // flex-grow: 1;
+                // flex-shrink: 0;
+                // flex-basis: 45%;
+                background-color: white;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                p {
+                    // margin-bottom: 0;
+                    font-size: 0.875rem;
+                }
+            }
+        }
+        .profile-main-pic {
+            // margin: -20% auto 0 auto;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            // margin-bottom: 1.5rem;
+        }
+
+        @include media-breakpoint-down(md) {
+            .profile-main-pic {
+                transform: translate(-50%, -75%);
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .profile-info {
+            padding: 1rem;
+            width: 100%;
+            // top: unset;
+            // bottom: 0;
+            transform: translate(0);
+            position: static;
+            margin-top: 10rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    #profileTab {
+        margin: auto auto 1.5rem auto;
+    }
+
+    @include media-breakpoint-down(lg) {
+        #profileTab {
+            margin: auto auto 0 auto;
+            // width: 90%;
+        }
+    }
+
+    // @include media-break
+}
+
+@include media-breakpoint-down(md) {
+    .profile {
+        height: auto;
+        max-height: unset;
+        min-height: 350px;
+    }
+}
+
+.accordion-item {
+    border: 0;
+}
+
+.form-check {
+    margin-bottom: 0.5rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+#ownedFilter {
+    .accordion-button {
+        padding: 1rem 0;
+    }
+}
+
+a.grid-item.collection-item {
+    .ratio:after {
+        width: 100%;
+        height: 100%;
+        content: "";
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .collection-overlay {
+        flex-direction: column;
+        color: white;
+        text-align: center;
+        background-color: transparent;
+        h5 {
+            color: white;
+            margin: 0;
+        }
+    }
+
+    p.item-amount {
+        position: absolute;
+        // width: max-content;
+        left: 50%;
+        bottom: 1rem;
+        transform: translateX(-50%);
+        // margin: 0 auto;
+    }
+}
+
+// nav tab
+.nav-pills .nav-link.btn {
+    color: $black;
+    background-color: white;
+
+    .underline {
+        border-width: 4px;
+    }
+}
+
+.nav-pills .nav-item {
+    position: relative;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .nav-item.show .nav-link {
+    color: $primary;
+    border-color: transparent transparent $primary transparent;
+
+    .underline {
+        border-color: rgba($primary, 1);
+        border-radius: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+table {
+    table-layout: fixed;
+}
+
+@include media-breakpoint-down(md) {
+    .table > :not(caption) > * > * {
+        width: 150px;
+        padding: 0.5rem;
+    }
+
+    .table thead th {
+        width: 150px;
+        padding: 0 0.5rem;
+    }
+}
+
+.table tbody td:first-child {
+    // padding-left: 0;
+}
+
+.table tbody td:last-child {
+    // padding-right: 0;
+}
+
+#pendingPayment .grid-item .collection-overlay {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease-in-out;
+}
+
+#pendingPayment .grid-item:hover .collection-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+@include media-breakpoint-down(md) {
+    .grid-item .btn-create {
+        flex-direction: row;
+        align-items: center;
+
+        i {
+            font-size: 1rem;
+        }
+    }
+    
+}
+
+.uploadBtn {
+    background-color: white;
+    border: 1px solid $primary;
+    // width: 280px;
+    height: 200px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    // flex-direction: column;
+    justify-content: center;
+    // font-size: 1.5rem;
+    color: $primary;
+
+    i.fa-solid {
+        font-size: 1.5rem;
+        // margin-bottom: 1rem;
+    }
+}

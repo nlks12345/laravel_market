@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../scss/custom-variable.scss"
+    ],
+    "names": [],
+    "file": "custom-variable.css"
+}
